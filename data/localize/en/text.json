@@ -1,0 +1,854 @@
+[
+  {
+    "k": "LOADING_LOGIN",
+    "v": "Logging in"
+  },
+  {
+    "k": "LOADING_PROGRESS",
+    "v": "Loading resources [{0}%]"
+  },
+  {
+    "k": "LOADING_COMPLETE",
+    "v": "Complete"
+  },
+  {
+    "k": "LOADING_FOOTER_1",
+    "v": "Downloading over Wi-Fi recommended for HD gaming!"
+  },
+  {
+    "k": "LOADING_FOOTER_2",
+    "v": "If this is your first visit, downloading may take a while."
+  },
+  {
+    "k": "LOADING_FOOTER_3",
+    "v": "For the ultimate game experience, use Safari or Chrome!"
+  },
+  {
+    "k": "LOADING_FOOTER_4",
+    "v": "Turn off idle pages, give me more resources!"
+  },
+  {
+    "k": "LOADING_FOOTER_5",
+    "v": "Previously loaded games load faster from browser cache!"
+  },
+  {
+    "k": "LOADING_FOOTER_6",
+    "v": "Update to latest device update for best gaming experience!"
+  },
+  {
+    "k": "LOADING_GET_STARTED",
+    "v": "GET STARTED"
+  },
+  {
+    "k": "STRING_MIN",
+    "v": "Min"
+  },
+  {
+    "k": "STRING_MAX",
+    "v": "Max"
+  },
+  {
+    "k": "ROUND_ID",
+    "v": "Round ID"
+  },
+  {
+    "k": "MINIMUM_BET",
+    "v": "Minimum Bet"
+  },
+  {
+    "k": "MAXIMUM_BET",
+    "v": "Maximum Bet"
+  },
+  {
+    "k": "TURBO_NORMAL",
+    "v": "Normal Spin Enabled"
+  },
+  {
+    "k": "TURBO_TURBO",
+    "v": "Turbo Spin Enabled"
+  },
+  {
+    "k": "TURBO_SUPER_TURBO",
+    "v": "Super Turbo Spin Enabled"
+  },
+  {
+    "k": "AUTO_SPIN",
+    "v": "Auto Spin"
+  },
+  {
+    "k": "AUTO_SPIN_NUMBER",
+    "v": "Number of Auto Spins"
+  },
+  {
+    "k": "START_AUTO_SPIN",
+    "v": "Start Auto Spin"
+  },
+  {
+    "k": "AUTO_SPIN_STOP",
+    "v": "Stop on Bonus Feature"
+  },
+  {
+    "k": "HISTORY_BALANCE",
+    "v": "Balance"
+  },
+  {
+    "k": "CASH_WALLET",
+    "v": "Cash Wallet"
+  },
+  {
+    "k": "BET_OPTIONS",
+    "v": "Bet Options"
+  },
+  {
+    "k": "MIN_BET",
+    "v": "(Min Bet)"
+  },
+  {
+    "k": "MAX_BET",
+    "v": "(Max Bet)"
+  },
+  {
+    "k": "COST",
+    "v": "COST"
+  },
+  {
+    "k": "BUY_FS_DESC",
+    "v": "WIN UP TO {0}!"
+  },
+  {
+    "k": "PAYTABLE_BUTTON",
+    "v": "Paytable"
+  },
+  {
+    "k": "PAYTABLE_HEADER",
+    "v": "Symbol Payout Values"
+  },
+  {
+    "k": "SCATTER_SYMBOL",
+    "v": "Scatter\nSymbol"
+  },
+  {
+    "k": "WILD_SYMBOL",
+    "v": "Wild\nSymbol"
+  },
+  {
+    "k": "PAYTABLE_BUYFEATURE_TITLE",
+    "v": "Buy Feature"
+  },
+  {
+    "k": "PAYTALBE_WINNING_TITLE",
+    "v": "Winning Symbol & Cascade"
+  },
+  {
+    "k": "PAYTALBE_WINNING_DESC",
+    "v": "After each symbol land, if the symbol explodes, the player wins the corresponding payout."
+  },
+  {
+    "k": "PAYTALBE_WINNING_DESC2",
+    "v": "Winning symbols and payouts are made according to the “Paytable”."
+  },
+  {
+    "k": "PAYTALBE_WINNING_DESC3",
+    "v": "After the payout of every round is made, the winning symbol that exploded will allow the symbol above it to cascade down for a new round."
+  },
+  {
+    "k": "PAYTALBE_WINNING_DESC4",
+    "v": "Additional winning symbol will be tallied in every round until no more winning symbol can be tallied."
+  },
+  {
+    "k": "PAYTALBE_WINNING_DESC_5",
+    "v": "All wins shown in cash."
+  },
+  {
+    "k": "CASCADING_SYMBOLS",
+    "v": "After the payout of every round is made, all winning symbols will explode allowing the symbols above them to cascade down for a new round."
+  },
+  {
+    "k": "ADDITIONAL_WINNING_COMBINATIONS",
+    "v": "Additional winning combination will be tallied in every round until no more winning combination can be tallied."
+  },
+  {
+    "k": "WINS_DISPLAY",
+    "v": "All wins shown in cash."
+  },
+  {
+    "k": "GAME_CURRENCY_INFO",
+    "v": "The in-game currency is {0}."
+  },
+  {
+    "k": "BET_AMOUNT_OPTIONS",
+    "v": "The game is played with {0} options Bet Amount with bet values ranging from {1} to {2}."
+  },
+  {
+    "k": "BET_AMOUNT_SETTING",
+    "v": "The Bet Amount is set using the \"Bet Options\" buttons."
+  },
+  {
+    "k": "CASH_WALLET_DISPLAY",
+    "v": "\"Cash Wallet\" displays the cash available for wager."
+  },
+  {
+    "k": "CASH_WALLET_DISPLAY2",
+    "v": "A symbol win in cash is equal to the value shown in the \"Paytable\" multiplied by the bet amount."
+  },
+  {
+    "k": "WINNING_COMBINATIONS",
+    "v": "Winning combinations and payouts are made according to the \"Paytable\"."
+  },
+  {
+    "k": "BET_WAY_WIN_CALCULATION",
+    "v": "A bet way win in cash is equal to the value shown in the \"Paytable\" multiplied by the bet amount."
+  },
+  {
+    "k": "SIMULTANEOUS_WINS",
+    "v": "Simultaneous wins on different bet ways are added."
+  },
+  {
+    "k": "FREE_SPINS_FEATURE_HEADER",
+    "v": "Free Spins Feature"
+  },
+  {
+    "k": "FREE_SPINS_BET_AMOUNT",
+    "v": "Free Spins Feature is played at the same bet amount as the spin that triggered the Free Spins Feature."
+  },
+  {
+    "k": "FREE_SPINS_RETRIGGER",
+    "v": "Free spins can be retriggered."
+  },
+  {
+    "k": "MAX_WIN",
+    "v": "Maximum Win"
+  },
+  {
+    "k": "MAX_WIN_DESCRIPTION",
+    "v": "The maximum win amount is {0}x of the bet amout."
+  },
+  {
+    "k": "MAX_WIN_CAP_RULE",
+    "v": "If the total win in the Main Game or the Free Spins Feature reaches {0}x of the bet amount, the spin ends."
+  },
+  {
+    "k": "MAIN_GAME_HEADER",
+    "v": "Main Game"
+  },
+  {
+    "k": "SPIN_BUTTON",
+    "v": "Spin"
+  },
+  {
+    "k": "SPIN_BUTTON_DESCRIPTION",
+    "v": "Tap to start spin at the current Bet Amount."
+  },
+  {
+    "k": "SPIN_BUTTON_DESCRIPTION_2",
+    "v": "Tap the button or the game area during a spin to stop the reels."
+  },
+  {
+    "k": "PC_VERSION_HEADER",
+    "v": "PC Version only"
+  },
+  {
+    "k": "PC_SPACE_KEY_SPIN",
+    "v": "Press the <Space> key to start spin at the current Bet Amount."
+  },
+  {
+    "k": "PC_SPACE_KEY_SKIP",
+    "v": "When the reels are spinning, press the <Space> key to skip the reels spinning animation and reveal the reel results (subject to internet connection stability)."
+  },
+  {
+    "k": "STOP_BUTTON",
+    "v": "Stop"
+  },
+  {
+    "k": "STOP_BUTTON_DESCRIPTION",
+    "v": "Tap to stop Auto Spin. The number on the button indicates the remaining number of spins for Auto Spin."
+  },
+  {
+    "k": "MINUS_BUTTON",
+    "v": "Minus"
+  },
+  {
+    "k": "MINUS_BUTTON_DESCRIPTION",
+    "v": "Tap to reduce the Bet Amount."
+  },
+  {
+    "k": "PLUS_BUTTON",
+    "v": "Plus"
+  },
+  {
+    "k": "PLUS_BUTTON_DESCRIPTION",
+    "v": "Tap to increase the Bet Amount."
+  },
+  {
+    "k": "WALLET_BALANCE",
+    "v": "Wallet Balance"
+  },
+  {
+    "k": "WALLET_BALANCE_DESCRIPTION",
+    "v": "Tap to display the balance of available wallets."
+  },
+  {
+    "k": "BET_AMOUNT",
+    "v": "Bet Amount"
+  },
+  {
+    "k": "BET_AMOUNT_DESCRIPTION",
+    "v": "Tap to display the Bet Options."
+  },
+  {
+    "k": "BET_AMOUNT_DESCRIPTION_2",
+    "v": "Bet Amount: select the Bet Amount."
+  },
+  {
+    "k": "WIN_AMOUNT",
+    "v": "Win Amount"
+  },
+  {
+    "k": "WIN_AMOUNT_DESCRIPTION",
+    "v": "Tap to display the Game History."
+  },
+  {
+    "k": "AUTO_SPIN_DETAILED_DESCRIPTION",
+    "v": "Auto Spin automatically plays the game for a selected number of spins."
+  },
+  {
+    "k": "AUTO_SPIN_DETAILED_DESCRIPTION_2",
+    "v": "Tap on the values to select number of Auto Spins."
+  },
+  {
+    "k": "TURBO_SPIN",
+    "v": "Turbo Spin"
+  },
+  {
+    "k": "TURBO_SPIN_DESCRIPTION",
+    "v": "Tap to cycle through spin speed settings: Normal, Turbo, and Super Turbo."
+  },
+  {
+    "k": "MENU_POPUP_HEADER",
+    "v": "Info"
+  },
+  {
+    "k": "MENU_POPUP",
+    "v": "Tap to access Menu Pop-up."
+  },
+  {
+    "k": "SOUND_BUTTON",
+    "v": "Sound"
+  },
+  {
+    "k": "SOUND_BUTTON_DESCRIPTION",
+    "v": "Tap to turn sound ON or OFF."
+  },
+  {
+    "k": "PAYTABLE_DESCRIPTION",
+    "v": "Shows winning combinations and paytable."
+  },
+  {
+    "k": "RULES_BUTTON",
+    "v": "Rules"
+  },
+  {
+    "k": "RULES_BUTTON_DESCRIPTION",
+    "v": "Shows the game rules and button functions."
+  },
+  {
+    "k": "HISTORY_BUTTON",
+    "v": "History"
+  },
+  {
+    "k": "HISTORY_DESCRIPTION",
+    "v": "Shows details of the previous games played. Scroll down to the end to load more records."
+  },
+  {
+    "k": "HISTORY_DESCRIPTION_2",
+    "v": "Tap <img src='General_icon_date'/> to select the dates of games to be shown in History."
+  },
+  {
+    "k": "CLOSE_BUTTON",
+    "v": "Close"
+  },
+  {
+    "k": "CLOSE_BUTTON_DESCRIPTION",
+    "v": "Tap to return to the Main Game."
+  },
+  {
+    "k": "ADDITIONAL_INFORMATION_HEADER",
+    "v": "Additional Information"
+  },
+  {
+    "k": "AUTOMATICALLY_RETURN_DAY",
+    "v": "The game will automatically return to its initial state after being idle for {0} day(s). Progress and status of any collection games, unfinished free games, and unfinished feature games etc will no longer be retained."
+  },
+  {
+    "k": "AUTOMATICALLY_RETURN_HOUR",
+    "v": "The game will automatically return to its initial state after being idle for {0} hour(s). Progress and status of any collection games, unfinished free games, and unfinished feature games etc will no longer be retained."
+  },
+  {
+    "k": "AUTOMATICALLY_RETURN_MINUTE",
+    "v": "The game will automatically return to its initial state after being idle for {0} minute(s). Progress and status of any collection games, unfinished free games, and unfinished feature games etc will no longer be retained."
+  },
+  {
+    "k": "MALFUNCTION_DISCLAIMER",
+    "v": "Malfunction voids all pays and plays."
+  },
+  {
+    "k": "DISPUTE_RESOLUTION",
+    "v": "In the event of disputes over game results, all game results that are shown in the game history page are absolute and final."
+  },
+  {
+    "k": "HISTORY_FIRST_LOAD",
+    "v": "History records may taken awhile to appear. \nPlease come back later!"
+  },
+  {
+    "k": "HISTORY_NO_DATA",
+    "v": "No Game History"
+  },
+  {
+    "k": "HISTORY_TODAY",
+    "v": "Today"
+  },
+  {
+    "k": "HISTORY_LAST_7_DAYS",
+    "v": "Last 7 days"
+  },
+  {
+    "k": "HISTORY_TIME",
+    "v": "Time"
+  },
+  {
+    "k": "HISTORY_TRANSACTION",
+    "v": "Transaction"
+  },
+  {
+    "k": "HISTORY_BET",
+    "v": "Bet"
+  },
+  {
+    "k": "HISTORY_PROFIT",
+    "v": "Profit"
+  },
+  {
+    "k": "HISTORY_RECORDS",
+    "v": "Records"
+  },
+  {
+    "k": "HISTORY_SELECT_DATE",
+    "v": "Select Date Range"
+  },
+  {
+    "k": "HISTORY_CUSTOM",
+    "v": "Custom"
+  },
+  {
+    "k": "HISTORY_START",
+    "v": "Start"
+  },
+  {
+    "k": "HISTORY_END",
+    "v": "End"
+  },
+  {
+    "k": "HISTORY_CONFIRM",
+    "v": "Confirm"
+  },
+  {
+    "k": "HISTORY_NORMAL_SPIN",
+    "v": "Normal Spin"
+  },
+  {
+    "k": "HISTORY_ROUND",
+    "v": "Round"
+  },
+  {
+    "k": "HISTORY_PAYOUT",
+    "v": "Payout"
+  },
+  {
+    "k": "HISTORY_NO_WIN",
+    "v": "No Winning Combination"
+  },
+  {
+    "k": "HISTORY_WIN_MULTIPLIER",
+    "v": "Win Multiplier"
+  },
+  {
+    "k": "HISTORY_FEATURE_SPIN",
+    "v": "Feature Spin"
+  },
+  {
+    "k": "LOADING_TEXT",
+    "v": "Loading"
+  },
+  {
+    "k": "NETWORK_RECONNECT",
+    "v": "Network is busy, retrying now... ({0} time(s))"
+  },
+  {
+    "k": "ERROR_POPUP_TITLE",
+    "v": "Connection Issue"
+  },
+  {
+    "k": "ERROR_POPUP_CODE",
+    "v": "Code"
+  },
+  {
+    "k": "ERROR_POPUP_SERVER_NOT_REACHABLE",
+    "v": "Failed to connect to game server. \nPlease check your network connection or try again."
+  },
+  {
+    "k": "ERROR_POPUP_RETRY",
+    "v": "Retry"
+  },
+  {
+    "k": "ERROR_POPUP_QUIT",
+    "v": "Quit"
+  },
+  {
+    "k": "MAX_WIN_LIMIT_REACHED",
+    "v": "The maximum win limit has been reached!"
+  },
+  {
+    "k": "MAX_WIN_REACHED_MESSAGE",
+    "v": "You have won {0}!"
+  },
+  {
+    "k": "MAX_WIN_OK",
+    "v": "OK"
+  },
+  {
+    "k": "ROTATE_WARNING",
+    "v": "Please switch back to portrait mode \nto continue the game"
+  },
+  {
+    "k": "SESSION_TIMEOUT_MESSAGE",
+    "v": "Session timeout.\nPlease login again."
+  },
+  {
+    "k": "INSUFFICIENT_BALANCE_MESSAGE",
+    "v": "Insufficient Balance"
+  },
+  {
+    "k": "BALANCE_TOP_UP_MESSAGE",
+    "v": "Please top up your cash wallet."
+  },
+  {
+    "k": "BALANCE_REFRESH_MESSAGE",
+    "v": "Refresh the game if the balance doesn't update after topping up."
+  },
+  {
+    "k": "STRING_OK",
+    "v": "OK"
+  },
+  {
+    "k": "COMMON_EXIT_GAME",
+    "v": "Exit Game"
+  },
+  {
+    "k": "COMMON_EXIT_DESC",
+    "v": "Are you sure you want to exit the game and return to the main game lobby?"
+  },
+  {
+    "k": "CANCEL",
+    "v": "Cancel"
+  },
+  {
+    "k": "EXIT",
+    "v": "Exit"
+  },
+  {
+    "k": "COMMON_HOME_DESC",
+    "v": "Home button is disabled while spinning. Please try again later."
+  },
+  {
+    "k": "COMMON_ERROR_0",
+    "v": "Invalid game code. Please check and try again (00)"
+  },
+  {
+    "k": "COMMON_ERROR_1",
+    "v": "Bet configuration is missing. Unable to place bets at this time. Please reload the game (01)"
+  },
+  {
+    "k": "COMMON_ERROR_2",
+    "v": "Due to high traffic, please try refreshing the page to continue playing! (02)"
+  },
+  {
+    "k": "COMMON_ERROR_3",
+    "v": "Invalid bet amount. Please check and place your bet again according to the rules (03)"
+  },
+  {
+    "k": "COMMON_ERROR_4",
+    "v": "Insufficient balance to place the bet. Please deposit more funds (04)"
+  },
+  {
+    "k": "COMMON_ERROR_5",
+    "v": "Your session has expired. Please log in again to continue playing (05)"
+  },
+  {
+    "k": "COMMON_ERROR_6",
+    "v": "Due to high traffic, please try refreshing the page to continue playing! (06)"
+  },
+  {
+    "k": "COMMON_ERROR_7",
+    "v": "Due to high traffic, please try refreshing the page to continue playing! (07)"
+  },
+  {
+    "k": "COMMON_ERROR_8",
+    "v": "Payout service error. Please contact support to verify your winnings (08)"
+  },
+  {
+    "k": "COMMON_ERROR_9",
+    "v": "An unknown error occurred. Please try again  (09)"
+  },
+  {
+    "k": "COMMON_ERROR_10",
+    "v": "Due to high traffic, please try refreshing the page to continue playing! (10)"
+  },
+  {
+    "k": "COMMON_ERROR_11",
+    "v": "Due to high traffic, please try refreshing the page or retry to continue playing! (11)"
+  },
+  {
+    "k": "COMMON_ERROR_12",
+    "v": "Invalid action. Please perform the action again correctly (12)"
+  },
+  {
+    "k": "COMMON_ERROR_13",
+    "v": "This account is already in use in another game or device. Please log in and try again (13)"
+  },
+  {
+    "k": "COMMON_ERROR_14",
+    "v": "The server is currently under maintenance. Please try again later (14)"
+  },
+  {
+    "k": "COMMON_ERROR_15",
+    "v": "Connection Issue (15)"
+  },
+  {
+    "k": "COMMON_ERROR_16",
+    "v": "Insufficient Fund (16)"
+  },
+  {
+    "k": "COMMON_ERROR_17",
+    "v": "Bet was not successful. Please close the game and try again later (17)"
+  },
+  {
+    "k": "COMMON_ERROR_18",
+    "v": "You have reached the betting limit. Please contact customer support (18)"
+  },
+  {
+    "k": "COMMON_INSTANT_PLAY",
+    "v": "Instant Play"
+  },
+  {
+    "k": "SPIN",
+    "v": "Spin"
+  },
+  {
+    "k": "WIN",
+    "v": "Win"
+  },
+  {
+    "k": "X",
+    "v": "X"
+  },
+  {
+    "k": "BALANCE",
+    "v": "Balance"
+  },
+  {
+    "k": "TOTAL_BET",
+    "v": "Total Bet"
+  },
+  {
+    "k": "TOTAL_WIN",
+    "v": "Total Win"
+  },
+  {
+    "k": "NUMBER_OF_INSTANT_SPIN",
+    "v": "Number of Instant Spins:"
+  },
+  {
+    "k": "BET_AMOUNT",
+    "v": "Bet Amount"
+  },
+  {
+    "k": "INSTANT_PLAY_POPUP_TITLE",
+    "v": "Ready for Instant Play?"
+  },
+  {
+    "k": "INSTANT_PLAY_POPUP_CONTENT",
+    "v": "Start {0} Instant spins for {1}{2}"
+  },
+  {
+    "k": "WIN_UP_TO",
+    "v": "WIN UP TO {0}!"
+  },
+  {
+    "k": "DO_NOT_ASK_AGAIN",
+    "v": "Do not ask again"
+  },
+  {
+    "k": "CANCEL",
+    "v": "Cancel"
+  },
+  {
+    "k": "START",
+    "v": "Start"
+  },
+  {
+    "k": "INSTANT_SPIN_RULES",
+    "v": "Play multiple spins instantly and view all results at once."
+  },
+  {
+    "k": "STARTING_BALANCE",
+    "v": "Starting Balance"
+  },
+  {
+    "k": "BIG_WIN",
+    "v": "BIG WIN"
+  },
+  {
+    "k": "MEGA_WIN",
+    "v": "MEGA WIN"
+  },
+  {
+    "k": "SUPER_MEGA_WIN",
+    "v": "SUPER MEGA WIN"
+  },
+  {
+    "k": "GOLD_PLATED_SYMBOL_LOCATION",
+    "v": "Gold Plated symbols appears on reels 2,3 and 4 only."
+  },
+  {
+    "k": "GOLD_PLATED_SYMBOLS_HEADER",
+    "v": "Gold Plated Symbols"
+  },
+  {
+    "k": "GOLD_PLATED_SYMBOLS_DESCRIPTION",
+    "v": "During any spins, some symbols (excluding Wild symbol and Scatter symbol) in reel 2,3 and/or 4 may appear in gold."
+  },
+  {
+    "k": "GOLD_PLATED_SYMBOL_TRANSFORMATION",
+    "v": "At every new round after the new symbols have cascaded down, any Gold Plated symbol(s) that is involved in a win in the previous round will be transformed into Wild symbol(s)."
+  },
+  {
+    "k": "MULTIPLIER_HEADER",
+    "v": "Multiplier"
+  },
+  {
+    "k": "MULTIPLIER_DESCRIPTION",
+    "v": "During any spins, all wins will be multiplied by the multiplier shown above the reels, starting with x1 in the first round."
+  },
+  {
+    "k": "FIRST_ROUND_MULTIPLIER",
+    "v": "Any win in the first round will increase the second round’s multiplier to x2."
+  },
+  {
+    "k": "SECOND_ROUND_MULTIPLIER",
+    "v": "Any win in the second round will increase the third round’s multiplier to x3."
+  },
+  {
+    "k": "THIRD_ROUND_MULTIPLIER",
+    "v": "Any win in the third round will increase the fourth round’s (and beyond) multiplier to x5."
+  },
+  {
+    "k": "FREE_SPINS_TRIGGER",
+    "v": "3 Scatter symbols appearing anywhere will trigger the Free Spins Feature with 10 free spins. Each additional Scatter symbol will trigger 2 more free spins."
+  },
+  {
+    "k": "FREE_SPINS_GOLD_SYMBOLS",
+    "v": "During the Free Spins Feature, all symbols (excluding Wild symbol and Scatter symbol) in reel 3 will appear in gold."
+  },
+  {
+    "k": "FREE_SPINS_MULTIPLIERS",
+    "v": "The multipliers above the reels will be increased to x2, x4, x6 and x10 respectively."
+  },
+  {
+    "k": "WAYS_HEADER",
+    "v": "2000 Ways"
+  },
+  {
+    "k": "BET_WAYS_WIN_CONDITION",
+    "v": "Bet ways win if the winning symbols are in succession from the leftmost reel to the right."
+  },
+  {
+    "k": "WINNING_BET_WAYS_CALCULATION",
+    "v": "Total number of winning bet ways for each symbol are calculated by multiplying the number of adjacent winning symbols on each symbols from the leftmost reel to the right."
+  },
+  {
+    "k": "PAYTABLE_CALCULATION",
+    "v": "From Above Example:"
+  },
+  {
+    "k": "WINNING_SYMBOL_PAYOUT",
+    "v": "The winning symbol payout is multiplied by the number of winning bet ways."
+  },
+  {
+    "k": "WIN_EXAMPLE",
+    "v": "Total Winnings in this \nexample:"
+  },
+  {
+    "k": "WILD_SYMBOL_FUNCTION",
+    "v": "Wild symbol substitutes for all symbols except Scatter symbol."
+  },
+  {
+    "k": "SCATTER_SYMBOL_POPUP",
+    "v": "3 Scatter symbols will trigger free spins."
+  },
+  {
+    "k": "WILD_SYMBOL_POPUP",
+    "v": "Wild symbol substitues for all symbols except Scatter symbol."
+  },
+  {
+    "k": "E1_BET_AMOUNT_OPTIONS",
+    "v": "The game is played with {0} options Bet Amount for 2,000 ways, with bet values ranging from {1} to {2}."
+  },
+  {
+    "k": "HISTORY_THREE_OF_A_KIND",
+    "v": "Three of a Kind"
+  },
+  {
+    "k": "HISTORY_FOUR_OF_A_KIND",
+    "v": "Four of a Kind"
+  },
+  {
+    "k": "HISTORY_FIVE_OF_A_KIND",
+    "v": "Five of a Kind"
+  },
+  {
+    "k": "HISTORY_WAYS",
+    "v": "way(s)"
+  },
+  {
+    "k": "HISTORY_PAYOUT_INFO",
+    "v": "Bet Amount x Symbol Payout Values x Way(s) x Multiplier"
+  },
+  {
+    "k": "HISTORY_FREE_SPIN",
+    "v": "Free Spin"
+  },
+  {
+    "k": "E1_BUY_FS_USP",
+    "v": "Free Spins are ready to go"
+  },
+  {
+    "k": "E1_BUY_FS",
+    "v": "Buy Free Spins"
+  },
+  {
+    "k": "E1_BUY_FS_DESCRIPTION_1",
+    "v": "Free Spins Feature can be instantly triggered from the Main Game by buying it for 75x current bet amount."
+  },
+  {
+    "k": "E1_BUY_FS_DESCRIPTION_2",
+    "v": "When buying Free Spins Feature, at least 3 Scatter symbols are guaranteed to appear on the triggering spin."
+  },
+  {
+    "k": "TITLE",
+    "v": "Mahjong Dragon Ways"
+  },
+  {
+    "k": "GAME_DESCRIPTION",
+    "v": "Mahjong Dragon Ways is a 5-reel, 4-row (with an additional row for each of reel 2,3 and 4) video slot featuring Wild symbol transformation and free spins with increasing multiplier."
+  }
+]

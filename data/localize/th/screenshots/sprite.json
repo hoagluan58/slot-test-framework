@@ -1,0 +1,142 @@
+[
+  {
+    "k": "LANDING",
+    "v": "sprites/Landing/landing_backing_art"
+  },
+  {
+    "k": "MG_PROMOTION_1",
+    "v": "sprites/NotiBar/maingame_text_2000ways"
+  },
+  {
+    "k": "MG_PROMOTION_2",
+    "v": "sprites/UIKit/MainGame/maingame_text_winupto5000x"
+  },
+  {
+    "k": "BONUS_PROMOTION_1",
+    "v": "sprites/UIKit/Bonus/bonusgame_content_winupto5000x"
+  },
+  {
+    "k": "BONUS_PROMOTION_2",
+    "v": "sprites/UIKit/Bonus/bonusgame_content_2000ways"
+  },
+  {
+    "k": "MG_TOTAL_WIN",
+    "v": "sprites/NotiBar/maingame_content_total"
+  },
+  {
+    "k": "MG_WIN",
+    "v": "sprites/NotiBar/maingame_content_win"
+  },
+  {
+    "k": "MG_CONTENT_1",
+    "v": "sprites/NotiBar/maingame_content_1"
+  },
+  {
+    "k": "MG_CONTENT_2",
+    "v": "sprites/NotiBar/maingame_content_2"
+  },
+  {
+    "k": "MG_CONTENT_3",
+    "v": "sprites/NotiBar/maingame_content_3"
+  },
+  {
+    "k": "MG_CONTENT_4",
+    "v": "sprites/NotiBar/maingame_content_4"
+  },
+  {
+    "k": "MG_CONTENT_5",
+    "v": "sprites/NotiBar/maingame_content_5"
+  },
+  {
+    "k": "MG_CONTENT_6",
+    "v": "sprites/NotiBar/maingame_content_6"
+  },
+  {
+    "k": "BONUS_CONTENT_FS",
+    "v": "sprites/NotiBar/bonusgame_content_fs"
+  },
+  {
+    "k": "BONUS_TRANS_FS_WON",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Start/transition_text_freespinwon"
+  },
+  {
+    "k": "BONUS_FS_REMAIN",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Retrigger/bonusgame_text_remaining"
+  },
+  {
+    "k": "BONUS_FS_LAST",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Retrigger/bonusgame_text_lastspin"
+  },
+  {
+    "k": "BONUS_FS_COLLECT",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_End/totalwin_label_collect"
+  },
+  {
+    "k": "BONUS_FS_COLLECT_PRESSED",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_End/totalwin_label_collect_off"
+  },
+  {
+    "k": "BONUS_FS_TRANS_TOTAL_WIN",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_End/totalwin_text_totalwin"
+  },
+  {
+    "k": "BONUS_FS_TRANS_FS_WON_TITLE",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Start/transition_text_freespinwon"
+  },
+  {
+    "k": "BONUS_FS_TRANS_FS_PROMOTION",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Start/transiton_text_allsymbols"
+  },
+  {
+    "k": "BONUS_FS_TRANS_FS_START",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Start/transition_label_start"
+  },
+  {
+    "k": "BONUS_FS_TRANS_FS_START_PRESSED",
+    "v": "sprites/FreeSpin/FreeSpin_Transition_Start/transition_label_start_off"
+  },
+  {
+    "k": "WINTIER_BIGWIN",
+    "v": "sprites/WinTier/wintier_BIGWIN_text"
+  },
+  {
+    "k": "WINTIER_BIGWIN_SHADOW",
+    "v": "sprites/WinTier/wintier_BIGWIN_shadow"
+  },
+  {
+    "k": "WINTIER_MEGAWIN",
+    "v": "sprites/WinTier/wintier_MEGAWIN_text"
+  },
+  {
+    "k": "WINTIER_MEGAWIN_SHADOW",
+    "v": "sprites/WinTier/wintier_MEGAWIN_shadow"
+  },
+  {
+    "k": "WINTIER_SUPERWIN",
+    "v": "sprites/WinTier/wintier_SUPERMEGAWIN_text"
+  },
+  {
+    "k": "WINTIER_SUPERWIN_SHADOW",
+    "v": "sprites/WinTier/wintier_SUPERMEGAWIN_shadow"
+  },
+  {
+    "k": "BUY_FREESPINS_TITLE",
+    "v": "sprites/BuyFeature/buyfreespins_text"
+  },
+  {
+    "k": "BUY_FREESPINS_BTN_CANCEL",
+    "v": "sprites/BuyFeature/buyfreespins_button_cancel"
+  },
+  {
+    "k": "BUY_FREESPINS_BTN_START",
+    "v": "sprites/BuyFeature/buyfreespins_button_start"
+  },
+  {
+    "k": "BUY_FREESPINS_BTN_BUY",
+    "v": "sprites/BuyFeature/maingame_text_buyfreespins"
+  },
+  {
+    "k": "INSTANT_SPIN_LOGO",
+    "v": "sprites/InstantSpin/instant_logo_small"
+  }
+]

@@ -1,12 +1,8 @@
-node_modules/
-dist/
-.env
-test-results/
-playwright-report/
-report-dashboard/node_modules/
-report-dashboard/dist/
-*.db
 
-# Keep data folder but ignore generated run reports
-report-dashboard/data/*.json
-!report-dashboard/data/manifest.json
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

@@ -1,36 +1,15 @@
 {
-  "name": "slot-test-framework",
+  "name": "koban-slot-test-framework",
   "version": "1.0.0",
-  "description": "Automation testing framework for Cocos slot game",
+  "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "playwright test",
-    "test:smoke": "playwright test tests/smoke",
-    "test:ws": "playwright test tests/websocket",
-    "test:matrix": "playwright test tests/matrix",
-    "test:ui": "playwright test tests/ui",
-    "test:headed": "playwright test --headed",
-    "baseline": "cross-env CAPTURE_BASELINE=true playwright test tests/ui",
-    "report": "playwright show-report",
-    "dashboard": "npm --prefix report-dashboard run dev",
-    "typecheck": "tsc --noEmit"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/better-sqlite3": "^7.6.13",
-    "@types/node": "^25.5.0",
-    "@types/pngjs": "^6.0.5",
-    "better-sqlite3": "^12.8.0",
-    "cross-env": "^10.1.0",
-    "dotenv": "^17.3.1",
-    "pixelmatch": "^7.1.0",
-    "pngjs": "^7.0.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "zod": "^4.3.6"
+    "@types/node": "^25.5.0"
   }
 }
