@@ -1,15 +1,25 @@
 {
   "name": "koban-slot-test-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated test framework for Koban slot games",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:localization": "npx playwright test localization.spec.ts",
+    "test:sprites": "npx playwright test sprite-parity.spec.ts",
+    "test:visual": "npx playwright test localization-visual.spec.ts",
+    "test:currency": "npx playwright test currency.spec.ts",
+    "test:data": "npx playwright test localization.spec.ts sprite-parity.spec.ts",
+    "test:update-baselines": "npx playwright test --update-snapshots",
+    "report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.5.0"
+    "@types/node": "^25.5.0",
+    "typescript": "^5.7.0"
   }
 }
