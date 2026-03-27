@@ -1,62 +1,113 @@
 import { defineConfig, devices } from '@playwright/test';
+import type { GameFixtures } from './e2e/fixtures/game';
 
 /**
  * Slot Test Framework — Playwright Configuration
- * 
- * Optimized for Canvas/WebGL-based slot games.
+ *
+ * Tuned for Cocos Creator 3.x games running in the browser (local preview
+ * or a deployed build).  Canvas / WebGL games have very different timing
+ * characteristics from normal web pages, so most timeouts are generous.
+ *
+ * Override the target URL at runtime:
+ *   $env:GAME_URL='http://localhost:7456'; npx playwright test
  */
-export default defineConfig({
+
+const GAME_URL = process.env.GAME_URL ?? 'http://localhost:7456';
+
+export default defineConfig<GameFixtures>({
   testDir: './e2e',
 
-  /* Run tests in files in parallel */
+  /* Each test file runs sequentially; files can run in parallel. */
   fullyParallel: true,
 
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  /* Block accidental .only commits on CI. */
   forbidOnly: !!process.env.CI,
 
-  /* Retry on CI only */
+  /* Retry failed tests on CI only. */
   retries: process.env.CI ? 2 : 0,
 
-  /* Opt out of parallel tests on CI. */
+  /* Single worker on CI; local uses all available cores. */
   workers: process.env.CI ? 1 : undefined,
 
-  /* Reporter to use */
+  /* ─── Global test timeout ─────────────────────────────────────────────────
+   * Cocos games can take 30–60 s to boot assets, shaders, and fire
+   * 'game-loaded'. Set a generous per-test ceiling.                        */
+  timeout: 120_000,   // 2 minutes per test
+
   reporter: [
     ['html', { open: 'never' }],
-    ['list'],
+    ['dot'],
   ],
 
-  /* Shared settings for all the projects below. */
   use: {
-    baseURL: 'https://ppc-test.dev.kobanstudio.com',
+    baseURL: GAME_URL,
 
-    /* Canvas games need more time to load assets */
-    actionTimeout: 15_000,
-    navigationTimeout: 30_000,
+    /* ─── Timeouts ──────────────────────────────────────────────────────────
+     * actionTimeout is the default for page.waitForFunction() in
+     * Playwright ≥ 1.35.  Set it high enough that our 60-s game-boot wait
+     * is never capped by this value.                                       */
+    actionTimeout:     90_000,   // covers waitForFunction / click / fill
+    navigationTimeout: 60_000,   // goto / waitForNavigation
 
-    /* Collect trace when retrying the failed test */
-    trace: 'on-first-retry',
-
-    /* Screenshot comparison settings */
+    /* Traces & videos help debug canvas failures. */
+    trace:      'on-first-retry',
+    video:      'on-first-retry',
     screenshot: 'only-on-failure',
   },
 
-  /* Snapshot/screenshot comparison settings */
+  /* ─── Assertion / screenshot comparison settings ─────────────────────── */
   expect: {
+    timeout: 15_000,
     toHaveScreenshot: {
-      /* Allow 2% pixel difference for anti-aliasing and rendering variance */
-      maxDiffPixelRatio: 0.02,
-      /* Animation threshold — Canvas games have minor rendering variations */
+      maxDiffPixelRatio: 0.02,   // 2 % pixel tolerance for WebGL variance
       threshold: 0.3,
     },
   },
 
   projects: [
+    // ── Chromium base (shared browser config) ─────────────────────────────
+    // Individual game projects extend this via `use`.
+    // Do not add testMatch here — it would run all tests for all games.
+
+    // ── E1 Engine games ───────────────────────────────────────────────────
+    // Each project runs the E1 engine test suite against one game URL.
+    // To add a new game: copy one block, set name/GAME/baseURL.
     {
-      name: 'chromium',
+      name: 'mahjong-dragon-ways',
+      testMatch: 'e2e/engines/E1/**/*.spec.ts',
+      // Passes gameId into the game fixture for this project
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1280, height: 720 },
+        baseURL: 'https://ppc-test.dev.kobanstudio.com',
+        gameId: 'mahjong-dragon-ways',
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-gpu-sandbox',
+            '--disable-webgpu',
+            '--ignore-certificate-errors',
+          ],
+        },
+      },
+    },
+    // ── General / smoke tests (no engine) ─────────────────────────────────
+    {
+      name: 'smoke',
+      testMatch: 'e2e/smoke/**/*.spec.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+        viewport: { width: 1280, height: 720 },
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-gpu-sandbox',
+            '--disable-webgpu',
+            '--ignore-certificate-errors',
+          ],
+        },
       },
     },
   ],

@@ -5,12 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "test:localization": "npx playwright test localization.spec.ts",
-    "test:sprites": "npx playwright test sprite-parity.spec.ts",
-    "test:visual": "npx playwright test localization-visual.spec.ts",
-    "test:currency": "npx playwright test currency.spec.ts",
-    "test:data": "npx playwright test localization.spec.ts sprite-parity.spec.ts",
-    "test:update-baselines": "npx playwright test --update-snapshots",
     "report": "npx playwright show-report"
   },
   "keywords": [],
