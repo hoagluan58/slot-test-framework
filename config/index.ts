@@ -30,4 +30,5 @@ export const gameRegistry: import('./types').GameEntry[] = [
 
 // ── Utilities & Types (re-exported for convenience) ───────────────────────────
 export { buildGameUrl, findGame, getEngineForGame } from './utils';
-export type { EngineConfig, GameConfig, GameEntry, GameNodes } from './types';
+export type { EngineConfig, GameConfig, GameEntry, GameNodes, ScreenNodes } from './types';
+export { NodeDef } from './types';

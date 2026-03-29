@@ -46,12 +46,12 @@ export default defineConfig<GameFixtures>({
      * actionTimeout is the default for page.waitForFunction() in
      * Playwright ≥ 1.35.  Set it high enough that our 60-s game-boot wait
      * is never capped by this value.                                       */
-    actionTimeout:     90_000,   // covers waitForFunction / click / fill
+    actionTimeout: 90_000,   // covers waitForFunction / click / fill
     navigationTimeout: 60_000,   // goto / waitForNavigation
 
     /* Traces & videos help debug canvas failures. */
-    trace:      'on-first-retry',
-    video:      'on-first-retry',
+    trace: 'on-first-retry',
+    video: 'on-first-retry',
     screenshot: 'only-on-failure',
   },
 
@@ -73,14 +73,14 @@ export default defineConfig<GameFixtures>({
     // Each project runs the E1 engine test suite against one game URL.
     // To add a new game: copy one block, set name/GAME/baseURL.
     {
-      name: 'mahjong-dragon-ways',
+      name: 'ppc',
       testMatch: 'e2e/engines/E1/**/*.spec.ts',
       // Passes gameId into the game fixture for this project
       use: {
         ...devices['Desktop Chrome'],
         viewport: { width: 1280, height: 720 },
-        baseURL: 'https://ppc-test.dev.kobanstudio.com',
-        gameId: 'mahjong-dragon-ways',
+        baseURL: process.env.GAME_URL ?? 'http://localhost:7456',
+        gameId: 'ppc',
         launchOptions: {
           args: [
             '--no-sandbox',

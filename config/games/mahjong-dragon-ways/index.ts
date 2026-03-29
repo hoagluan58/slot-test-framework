@@ -7,28 +7,16 @@ import type { GameConfig } from '../../types';
  * How to fill in:
  *   1. Run:  npx playwright test smoke --project=smoke --headed
  *   2. Open HTML report → `exposed-test-nodes` attachment
- *   3. Copy keys here with a friendly name
+ *   3. Copy keys here with a friendly name, wrapping in NodeDef(nodeKey, l10nKey)
+ *      when the node has a localisation key, or a plain string otherwise.
  */
-export interface MahjongNodes {
-  landing: {
-    startButtonLabel: {nodeKey: string; l10nKey: string;};
-  }
-}
-
 export const config: GameConfig = {
   id: 'ppc',
   name: 'Mahjong Dragon Ways',
   engineId: 'E1',
   baseUrl: 'https://ppc-test.dev.kobanstudio.com/',
-  supportedLangs: ['en', 'th'],
+  supportedLangs: ['en', 'th', 'bd'],
   supportedCurrencies: ['usd', 'thb'],
 };
 
-export const nodes: MahjongNodes = {
-  landing: {
-    startButtonLabel: {
-      nodeKey: 'landing.start-button-label',
-      l10nKey: 'LOADING_GET_STARTED',
-    },
-  },
-};
+

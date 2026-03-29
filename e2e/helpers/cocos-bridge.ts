@@ -14,6 +14,7 @@
  */
 
 import { type Page } from '@playwright/test';
+import { NodeDef } from '../../config';
 
 // ---------------------------------------------------------------------------
 // Types mirrored from the Cocos CC runtime (serialisable subset)
@@ -94,8 +95,9 @@ export class CocosTestBridge {
    * @param key  Namespaced key from TestRegistry (e.g. 'landing.getStartedBtn')
    *             OR a slash-path for the scene walker (e.g. 'LandingScreen/Btn')
    */
-  async getNodeLabel(key: string): Promise<string | null> {
-    return this.page.evaluate((path) => {
+  async getNodeLabel(node: string | NodeDef): Promise<string | null> {
+    const key = node instanceof NodeDef ? node.nodeKey : node;
+    return this.page.evaluate((path: string) => {
       const cc = (window as any).cc;
 
       // Production-safe component getter: use the cc.Label class reference,
