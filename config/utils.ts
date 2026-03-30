@@ -1,4 +1,4 @@
-import type { EngineConfig, GameConfig, GameEntry } from './types';
+import type { EngineConfig, GameConfig } from './types';
 
 /**
  * Look up the engine config for a given game.
@@ -30,15 +30,12 @@ export function buildGameUrl(
   return url.toString();
 }
 
-/**
- * Find a game entry by ID. Throws if not registered.
- */
-export function findGame(registry: GameEntry[], gameId: string): GameEntry {
-  const entry = registry.find(g => g.id === gameId);
+export function findGame(config: GameConfig[], gameId: string): GameConfig {
+  const entry = config.find(g => g.id === gameId);
   if (!entry) {
     throw new Error(
-      `Game "${gameId}" not found in registry. ` +
-      `Available games: ${registry.map(g => g.id).join(', ')}`
+      `Game "${gameId}" not found in config. ` +
+      `Available games: ${config.map(g => g.id).join(', ')}`
     );
   }
   return entry;

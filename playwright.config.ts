@@ -74,20 +74,13 @@ export default defineConfig<GameFixtures>({
     // To add a new game: copy one block, set name/GAME/baseURL.
     {
       name: 'ppc',
-      testMatch: 'e2e/engines/E1/**/*.spec.ts',
-      // Passes gameId into the game fixture for this project
+      testMatch: 'e2e/engines/E1/ppc/**/*.spec.ts',
       use: {
         ...devices['Desktop Chrome'],
-        viewport: { width: 1280, height: 720 },
-        baseURL: process.env.GAME_URL ?? 'http://localhost:7456',
+        baseURL: process.env.GAME_URL ?? '',
         gameId: 'ppc',
         launchOptions: {
           args: [
-            '--no-sandbox',
-            '--disable-setuid-sandbox',
-            '--disable-gpu-sandbox',
-            '--disable-webgpu',
-            '--ignore-certificate-errors',
           ],
         },
       },

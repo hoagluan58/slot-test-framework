@@ -14,7 +14,6 @@
  */
 
 import { type Page } from '@playwright/test';
-import { NodeDef } from '../../config';
 
 // ---------------------------------------------------------------------------
 // Types mirrored from the Cocos CC runtime (serialisable subset)
@@ -44,7 +43,7 @@ export interface SpriteInfo {
 // ---------------------------------------------------------------------------
 
 export class CocosTestBridge {
-  constructor(private readonly page: Page) {}
+  constructor(private readonly page: Page) { }
 
   /** Return the current active scene name. */
   async getSceneName(): Promise<string | null> {
@@ -87,51 +86,6 @@ export class CocosTestBridge {
   // ─── Exposed-node helpers (TestRegistry / test=1 mode) ───────────────────
 
   /**
-   * Read a label's string value from an exposed Cocos node.
-   *
-   * Checks `window.__testNodes` (populated by TestRegistry.register) first,
-   * then falls back to a scene tree walk by path segments.
-   *
-   * @param key  Namespaced key from TestRegistry (e.g. 'landing.getStartedBtn')
-   *             OR a slash-path for the scene walker (e.g. 'LandingScreen/Btn')
-   */
-  async getNodeLabel(node: string | NodeDef): Promise<string | null> {
-    const key = node instanceof NodeDef ? node.nodeKey : node;
-    return this.page.evaluate((path: string) => {
-      const cc = (window as any).cc;
-
-      // Production-safe component getter: use the cc.Label class reference,
-      // not the string 'Label' which breaks after minification.
-      function getLabel(node: any): any {
-        if (!node) return null;
-        // Prefer class-reference lookup (works in both dev & prod builds)
-        if (cc?.Label) return node.getComponent?.(cc.Label) ?? null;
-        // Fallback: string lookup (dev/preview only)
-        return node.getComponent?.('Label') ?? node.getComponent?.('cc.Label') ?? null;
-      }
-
-      // 1. Try the TestRegistry node map first (namespaced keys e.g. 'landing.btn')
-      const exposed = (window as any).__testNodes ?? (window as any).testNodes;
-      if (exposed && exposed[path]) {
-        const lbl = getLabel(exposed[path]);
-        return lbl?.string ?? lbl?.labelText ?? null;
-      }
-
-      // 2. Walk the scene by path segments (e.g. 'LandingScreen/GetStartedBtn')
-      const segments = path.split('/');
-      let current = cc?.director?.getScene();
-      for (const seg of segments) {
-        if (!current) return null;
-        current = current.children?.find((c: any) => c.name === seg) ?? null;
-      }
-      if (!current) return null;
-
-      const lbl = getLabel(current);
-      return lbl?.string ?? lbl?.labelText ?? null;
-    }, key);
-  }
-
-  /**
    * Access a raw node from `window.__testNodes` and run an evaluator against it.
    *
    * Useful for reading custom component properties or calling Cocos APIs directly.
@@ -166,6 +120,23 @@ export class CocosTestBridge {
         return fn(node, cc);
       },
       [key, evaluate.toString()] as [string, string]
+    );
+  }
+
+  /**
+   * Poll until `window.__testNodes[key]` is populated by the Cocos game.
+   *
+   * Use this before `clickNode` / `getNode` when the node may be registered
+   * slightly after the 'game-loaded' event (common race condition).
+   *
+   * @param key        TestRegistry key e.g. 'landing.start-button'
+   * @param timeoutMs  How long to wait before throwing (default: 15 s)
+   */
+  async waitForNode(key: string, timeoutMs = 15_000): Promise<void> {
+    await this.page.waitForFunction(
+      (k) => !!(window as any).__testNodes?.[k],
+      key,
+      { timeout: timeoutMs }
     );
   }
 
@@ -325,12 +296,22 @@ export class CocosTestBridge {
    *
    * @param key  Namespaced key e.g. 'landing.getStartedBtn'
    */
-  async clickNode(key: string): Promise<boolean> {
+  async clickNode(key: string, waitMs = 10_000): Promise<boolean> {
+    // Wait for the node to appear in __testNodes before attempting the click.
+    // This prevents the race condition where the Cocos game registers nodes
+    // slightly after the 'game-loaded' event is dispatched.
+    try {
+      await this.waitForNode(key, waitMs);
+    } catch {
+      return false; // node never appeared — let caller decide what to do
+    }
+
     return this.page.evaluate((k) => {
       const cc = (window as any).cc;
       const target = (window as any).__testNodes?.[k] ?? null;
       if (!target) return false;
 
+      // ── Find the Button component ──────────────────────────────────────────
       const ButtonClass = cc?.Button ?? null;
       let btn: any = ButtonClass ? target.getComponent?.(ButtonClass) : null;
       if (!btn) btn = target.getComponent?.('Button') ?? null;
@@ -340,15 +321,38 @@ export class CocosTestBridge {
         ) ?? null;
       }
 
-      if (btn?.node) {
-        btn.node.emit('click', btn);
-        return true;
+      console.log("Button: ", btn);
+      if (btn) {
+        // ── Method 1: cc.EventHandler.emitEvents ────────────────────────────
+        // This is exactly what Cocos calls internally after a touch sequence.
+        // btn.node.emit('click', btn) only broadcasts the event — it does NOT
+        // invoke the clickEvents array. We must call emitEvents directly.
+        if (cc?.EventHandler?.emitEvents && btn.clickEvents?.length) {
+          cc.EventHandler.emitEvents(btn.clickEvents, btn);
+          console.log("Button clicked via emitEvents");
+          return true;
+        }
+
+        // ── Method 2: Simulate touch-start + touch-end on the button node ───
+        // Goes through Cocos's input pipeline → _onTouchEnded → emitEvents.
+        if (btn.node) {
+          const touchStartEvt = cc?.Node?.EventType?.TOUCH_START ?? 'touch-start';
+          const touchEndEvt = cc?.Node?.EventType?.TOUCH_END ?? 'touch-end';
+          btn.node.emit(touchStartEvt);
+          btn.node.emit(touchEndEvt);
+          console.log("Button clicked via touch-start + touch-end");
+          return true;
+        }
       }
 
-      target.emit?.('touchend');
+      // ── Method 3: Raw touch events on the node (last resort) ───────────────
+      target.emit?.('touch-start');
+      target.emit?.('touch-end');
+      console.log("Button clicked via raw touch events");
       return true;
     }, key);
   }
+
 
   // ─── Utilities ────────────────────────────────────────────────────────────
 

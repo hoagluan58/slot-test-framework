@@ -16,8 +16,8 @@ import {
   engines,
   findGame,
   buildGameUrl,
-  type GameEntry,
   type EngineConfig,
+  GameConfig,
 } from '../../config';
 import { CocosTestBridge } from '../helpers/cocos-bridge';
 
@@ -25,7 +25,7 @@ export interface GameFixtures {
   /** Game ID — set via `use: { gameId }` in playwright.config.ts */
   gameId: string;
   /** Full config + nodes for the active game */
-  gameCfg: GameEntry;
+  gameCfg: GameConfig;
   /** Engine config the game runs on */
   engine: EngineConfig;
   /** Ready-to-use Cocos bridge (game is already loaded when test starts) */
@@ -49,25 +49,7 @@ export const test = base.extend<GameFixtures>({
     await use(engine);
   },
 
-  bridge: async ({ page, gameCfg }, use) => {
-    // Inject the game-loaded listener BEFORE navigation
-    await page.addInitScript(() => {
-      (window as any).__gameLoaded = false;
-      window.addEventListener('game-loaded', () => {
-        (window as any).__gameLoaded = true;
-      });
-    });
-
-    // Navigate with ?test=1, default lang & currency
-    const url = buildGameUrl(gameCfg, gameCfg.supportedLangs[0], gameCfg.supportedCurrencies[0]);
-    await page.goto(url, { waitUntil: 'domcontentloaded' });
-
-    // Wait for the game to signal it has fully loaded
-    await page.waitForFunction(
-      () => (window as any).__gameLoaded === true,
-      { timeout: 90_000, polling: 300 }
-    );
-
+  bridge: async ({ page }, use) => {
     await use(new CocosTestBridge(page));
   },
 });
